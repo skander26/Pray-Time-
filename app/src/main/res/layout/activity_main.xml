@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroun_app"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/location_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:text="المسجد الكبير ببومرداس"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="309dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/bottom_raduis"
+        android:backgroundTint="@color/brown"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextClock
+            android:layout_marginTop="10dp"
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:format12Hour="hh:mm:ss"
+            android:format24Hour="HH:mm:ss"
+            android:gravity="center"
+
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/today_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="monday,23,2023"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/nextpray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="next pray"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48426813" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="104dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="218dp"
+        android:backgroundTint="@color/brown"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.672">
+        <TextView
+            android:textColor="#009688"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="21sp"
+            android:text="الصبح"
+            android:layout_marginBottom="23dp"
+            />
+
+        <TextView
+            android:id="@+id/pray_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:text="pray"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/rest_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="rest_time"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="104dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="218dp"
+        android:backgroundTint="@color/brown"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.672"
+        card_view:cardCornerRadius="14dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintTop_toTopOf="@+id/guideline2">
+        <TextView
+            android:textColor="#009688"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="21sp"
+            android:text="العصر"
+            android:layout_marginBottom="23dp"
+            />
+
+        <TextView
+            android:id="@+id/pray_time3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="pray"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/rest_time3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="rest_time"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="104dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="218dp"
+        android:backgroundTint="@color/brown"
+        app:layout_constraintEnd_toStartOf="@+id/cardView1"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintVertical_bias="0.672"
+        card_view:cardCornerRadius="14dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="@id/guideline4"
+        card_view:layout_constraintTop_toTopOf="@+id/guideline2">
+        <TextView
+            android:textColor="#009688"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="21sp"
+            android:text="الظهر"
+            android:layout_marginBottom="23dp"
+            />
+
+        <TextView
+            android:id="@+id/pray_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="pray"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/rest_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="rest_time"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="104dp"
+        android:layout_height="101dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="@color/brown"
+        card_view:cardCornerRadius="14dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="@id/guideline4">
+        <TextView
+            android:textColor="#009688"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="21sp"
+            android:text="المغرب"
+            android:layout_marginBottom="23dp"
+            />
+
+        <TextView
+            android:id="@+id/pray_time4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="pray"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/rest_time4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="rest_time"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="104dp"
+        android:layout_height="101dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="@color/brown"
+        card_view:cardCornerRadius="14dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="@id/guideline4">
+        <TextView
+            android:textColor="#009688"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="21sp"
+            android:text="العشاء"
+            android:layout_marginBottom="23dp"
+            />
+
+        <TextView
+            android:id="@+id/pray_time5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="pray"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/rest_time5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="rest_time"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
